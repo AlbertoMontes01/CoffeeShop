@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CoffeeCatalogFragment">
+
+    <data>
+
+        <variable
+            name="CoffeeCatalogFragment"
+            type="com.example.coffeeshop.CoffeeCatalogFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_coffee"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/image_height"
+                        android:onClick="@{() -> CoffeeCatalogFragment.goNext(1)}"
+
+                        android:scaleType="centerCrop"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/black_coffee" />
+
+                    <TextView
+                        android:id="@+id/coffee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/black_coffee"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintStart_toStartOf="@id/image_coffee"
+                        app:layout_constraintTop_toBottomOf="@id/image_coffee" />
+
+                    <TextView
+                        android:id="@+id/making_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/time_padding"
+                        android:text="@string/time_one"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintEnd_toEndOf="@id/image_coffee"
+                        app:layout_constraintTop_toBottomOf="@id/coffee" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_coffee2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/image_height"
+                        android:onClick="@{() -> CoffeeCatalogFragment.goNext(2)}"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/best_coffee" />
+
+                    <TextView
+                        android:id="@+id/coffee2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/latte_coffee"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintStart_toStartOf="@id/image_coffee2"
+                        app:layout_constraintTop_toBottomOf="@id/image_coffee2" />
+
+                    <TextView
+                        android:id="@+id/making_time2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/time_padding"
+                        android:text="@string/time_three"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintEnd_toEndOf="@id/image_coffee2"
+                        app:layout_constraintTop_toBottomOf="@id/coffee2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_coffee3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/image_height"
+                        android:onClick="@{() -> CoffeeCatalogFragment.goNext(3)}"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/coffee" />
+
+                    <TextView
+                        android:id="@+id/coffee3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cappuccino_coffee"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintStart_toStartOf="@id/image_coffee3"
+                        app:layout_constraintTop_toBottomOf="@id/image_coffee3" />
+
+                    <TextView
+                        android:id="@+id/making_time3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/time_padding"
+                        android:text="@string/time_two"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintEnd_toEndOf="@id/image_coffee3"
+                        app:layout_constraintTop_toBottomOf="@id/coffee3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_coffee4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/image_height"
+                        android:onClick="@{() -> CoffeeCatalogFragment.goNext(4)}"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/delicious_coffee" />
+
+                    <TextView
+                        android:id="@+id/coffee4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/americano_coffee"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintStart_toStartOf="@id/image_coffee4"
+                        app:layout_constraintTop_toBottomOf="@id/image_coffee4" />
+
+                    <TextView
+                        android:id="@+id/making_time4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/time_padding"
+                        android:text="@string/time_one"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintEnd_toEndOf="@id/image_coffee4"
+                        app:layout_constraintTop_toBottomOf="@id/coffee4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_coffee5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/image_height"
+                        android:onClick="@{() -> CoffeeCatalogFragment.goNext(5)}"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/especial_coffee" />
+
+                    <TextView
+                        android:id="@+id/coffee5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/espresso_coffee"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintStart_toStartOf="@id/image_coffee5"
+                        app:layout_constraintTop_toBottomOf="@id/image_coffee5" />
+
+                    <TextView
+                        android:id="@+id/making_time5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/time_padding"
+                        android:text="@string/time_three"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintEnd_toEndOf="@id/image_coffee5"
+                        app:layout_constraintTop_toBottomOf="@id/coffee5" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_coffee6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/image_height"
+                        android:onClick="@{() -> CoffeeCatalogFragment.goNext(6)}"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/high_coffee" />
+
+                    <TextView
+                        android:id="@+id/coffee6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/doppio_coffee"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintStart_toStartOf="@id/image_coffee6"
+                        app:layout_constraintTop_toBottomOf="@id/image_coffee6" />
+
+                    <TextView
+                        android:id="@+id/making_time6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/time_padding"
+                        android:text="@string/time_two"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintEnd_toEndOf="@id/image_coffee6"
+                        app:layout_constraintTop_toBottomOf="@id/coffee6" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_coffee7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/image_height"
+                        android:onClick="@{() -> CoffeeCatalogFragment.goNext(7)}"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/hot_coffee" />
+
+                    <TextView
+                        android:id="@+id/coffee7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/red_eye_coffee"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintStart_toStartOf="@id/image_coffee7"
+                        app:layout_constraintTop_toBottomOf="@id/image_coffee7" />
+
+                    <TextView
+                        android:id="@+id/making_time7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/time_padding"
+                        android:text="@string/time_two"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintEnd_toEndOf="@id/image_coffee7"
+                        app:layout_constraintTop_toBottomOf="@id/coffee7" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_coffee8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/image_height"
+                        android:onClick="@{() -> CoffeeCatalogFragment.goNext(8)}"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/late_coffee" />
+
+                    <TextView
+                        android:id="@+id/coffee8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/macchiato_coffee"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintStart_toStartOf="@id/image_coffee8"
+                        app:layout_constraintTop_toBottomOf="@id/image_coffee8" />
+
+                    <TextView
+                        android:id="@+id/making_time8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/time_padding"
+                        android:text="@string/time_three"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintEnd_toEndOf="@id/image_coffee8"
+                        app:layout_constraintTop_toBottomOf="@id/coffee8" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+</layout>

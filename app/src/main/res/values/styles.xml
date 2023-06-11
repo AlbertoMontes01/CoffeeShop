@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.coffeeShop.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Button.CoffefShop" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/light_brown</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextViewHead.CoffeShope" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_textView</item>
+
+
+    </style>
+
+    <style name="TextViewBody.CoffeShope" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_textView</item>
+    </style>
+
+    <style name="Divider.CoffeeShope" parent="">
+        <item name="android:background">?attr/dividerHorizontal</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_button</item>
+        <item name="android:layout_marginBottom">@dimen/margin_top_button</item>
+    </style>
+
+    <style name="Button.Cancel.CoffeShope" parent="Widget.Material3.Button.TextButton">
+        <item name="android:paddingLeft">@dimen/m3_btn_padding_left</item>
+        <item name="android:paddingRight">@dimen/m3_btn_padding_right</item>
+        <item name="strokeColor">@color/light_brown</item>
+        <item name="android:textColor">@color/light_brown</item>
+        <item name="strokeWidth">@dimen/m3_btn_stroke_size</item>
+    </style>
+</resources>

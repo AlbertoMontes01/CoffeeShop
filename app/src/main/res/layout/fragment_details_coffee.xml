@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DetailsCoffeeFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.coffeeshop.model.OrderViewModel" />
+
+        <variable
+            name="detailsFragment"
+            type="com.example.coffeeshop.DetailsCoffeeFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_details_coffee"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_height"
+            android:scaleType="centerCrop"
+            app:imageResource="@{viewModel.image}"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_coffe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:paddingLeft="@dimen/time_padding"
+            android:text="@{viewModel.name}"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintStart_toStartOf="@id/image_details_coffee"
+            app:layout_constraintTop_toBottomOf="@id/image_details_coffee" />
+
+        <TextView
+            android:id="@+id/description_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:paddingLeft="@dimen/time_padding"
+            android:text="@string/descrption"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_coffe" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/Widget.coffeeShop.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:paddingLeft="@dimen/time_padding"
+            android:paddingRight="@dimen/time_padding"
+            android:text="@{viewModel.description}"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            app:layout_constraintTop_toBottomOf="@id/description_label" />
+
+        <TextView
+            android:id="@+id/time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:paddingLeft="@dimen/time_padding"
+            android:text="@string/estimated_time"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <TextView
+            android:id="@+id/detailsmaking_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:paddingRight="@dimen/time_padding"
+            android:text="@{viewModel.estimatedTime}"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintStart_toEndOf="@id/time_label"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <TextView
+            android:id="@+id/quantity_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:paddingLeft="@dimen/time_padding"
+            android:text="@string/quantity"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailsmaking_time" />
+
+        <NumberPicker
+            android:id="@+id/quantity_picker"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="@dimen/quantity_margin_left"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:value="@{viewModel.quantity}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quantity_label" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="@style/Button.Cancel.CoffeShope"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_button"
+            android:layout_marginEnd="@dimen/margin_end_button"
+            android:onClick="@{() -> detailsFragment.goBack()}"
+            android:text="@string/cancel"
+            android:textColor="@color/light_brown"
+            app:layout_constraintEnd_toStartOf="@id/summary_button"
+            app:layout_constraintStart_toStartOf="@id/quantity_picker"
+            app:layout_constraintTop_toBottomOf="@id/quantity_picker"
+            app:strokeColor="@color/light_brown" />
+
+        <Button
+            android:id="@+id/summary_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_button"
+            android:layout_marginEnd="@dimen/margin_end_button"
+            android:backgroundTint="@color/light_brown"
+            android:onClick="@{() ->detailsFragment.goNext()}"
+            android:text="@string/order"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cancel_button"
+            app:layout_constraintTop_toBottomOf="@id/quantity_picker" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_size">300dp</dimen>
+    <dimen name="order_coffee_button_width">250dp</dimen>
+    <dimen name="image_height">194dp</dimen>
+    <dimen name="image_left">10dp</dimen>
+    <dimen name="margin_top_button">16dp</dimen>
+    <dimen name="margin_end_button">16dp</dimen>
+    <dimen name="padding_constrain">16dp</dimen>
+    <dimen name="margin_between_elements">8dp</dimen>
+    <dimen name="radio_button_padding">8dp</dimen>
+    <dimen name="time_padding">4dp</dimen>
+    <dimen name="margin_top_textView">4dp</dimen>
+    <dimen name="radius_button">8dp</dimen>
+    <dimen name="quantity_margin_left">4dp</dimen>
+    <dimen name="order_summary_margin">4dp</dimen>
+</resources>

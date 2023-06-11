@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">CoffeeShop</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="getIn">Get In</string>
+    <string name="one">1</string>
+    <string name="type_of_coffee">Type of Coffee</string>
+    <string name="quantity">Select Quantity:</string>
+    <string name="order_quantity">Quantity</string>
+    <string name="descrption">Description</string>
+    <string name="send">Send order to another app</string>
+    <string name="black_coffee">Black Coffee</string>
+    <string name="description_black_coffee">"Black coffee is as simple as it gets with ground coffee beans steeped in hot water, served warm. And if you want to sound fancy, you can call black coffee by its proper name: cafe noir. Since it isn’t doctored up with milk or sugar, the quality of coffee is especially important."</string>
+    <string name="latte_coffee">Latte Coffee</string>
+    <string name="description_latte_coffee">As the most popular coffee drink out there, the latte is comprised of a shot of espresso and steamed milk with just a touch of foam. It can be ordered plain or with a flavor shot of anything from vanilla to pumpkin spice.</string>
+    <string name="cappuccino_coffee">Cappuccino Coffee</string>
+    <string name="description_cappuccino_coffee">Cappuccino is a latte made with more foam than steamed milk, often with a sprinkle of cocoa powder or cinnamon on top. Sometimes you can find variations that use cream instead of milk or ones that throw in flavor shot, as well.</string>
+    <string name="americano_coffee">Americano Coffee</string>
+    <string name="description_americano_coffee">With a similar flavor to black coffee, the americano consists of an espresso shot diluted in hot water. Pro tip: if you’re making your own, pour the espresso first, then add the hot water.</string>
+    <string name="espresso_coffee">Espresso Coffee</string>
+    <string name="description_espresso_coffee">An espresso shot can be served solo or used as the foundation of most coffee drinks, like lattes and macchiatos.</string>
+    <string name="doppio_coffee">Doppio Coffee</string>
+    <string name="description_doppio_coffee">A double shot of espresso, the doppio is perfect for putting extra pep in your step.</string>
+    <string name="red_eye_coffee">Red Eye Coffee</string>
+    <string name="description_red_eye_coffee">Named after those pesky midnight flights, a red eye can cure any tiresome morning. A full cup of hot coffee with an espresso shot mixed in, this will definitely get your heart racing.</string>
+    <string name="macchiato_coffee">Macchiato Coffee</string>
+    <string name="description_macchiato_coffee">The macchiato is another espresso-based drink that has a small amount of foam on top. It’s the happy medium between a cappuccino and a doppio.</string>
+    <string name="time_one">15 min</string>
+    <string name="time_two">10 min</string>
+    <string name="time_three">12 min</string>
+    <string name="coffee_order">New Coffee Order</string>
+    <string name="estimated_time">Estimated time: </string>
+    <string name="cancel">Cancel</string>
+    <string name="total">Total : $%s mxn</string>
+    <string name="order">Order</string>
+    <string name="order_details">Quantity: %1$s \n Description: %2$s \n Estimated time: %3$s \n
+        Total: %4$s \n\n Thank you!</string>
+    <plurals name="coffees">
+        <item quantity="one">%d coffee</item>
+        <item quantity="other">%d cofees</item>
+    </plurals>
+</resources>

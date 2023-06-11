@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FinalOrderFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.coffeeshop.model.OrderViewModel" />
+
+        <variable
+            name="finalOrder"
+            type="com.example.coffeeshop.FinalOrderFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_constrain">
+
+            <TextView
+                android:id="@+id/quantity_label"
+                style="@style/TextViewHead.CoffeShope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/order_quantity" />
+
+            <TextView
+                android:id="@+id/quantity"
+                style="@style/TextViewBody.CoffeShope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.quantity.toString()}" />
+
+            <View
+                android:id="@+id/divider_quantity_to_Description"
+                style="@style/Divider.CoffeeShope"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_top_button"
+                android:layout_marginBottom="@dimen/margin_end_button" />
+
+            <TextView
+                android:id="@+id/label_description"
+                style="@style/TextViewHead.CoffeShope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/descrption" />
+
+            <TextView
+                android:id="@+id/description"
+                style="@style/TextViewBody.CoffeShope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.description}" />
+
+            <View
+                android:id="@+id/divider_description_to_type_of_coffee"
+                style="@style/Divider.CoffeeShope"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:id="@+id/label_type_of_coffee"
+                style="@style/TextViewHead.CoffeShope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/type_of_coffee" />
+
+            <TextView
+                android:id="@+id/type_of_coffee"
+                style="@style/TextViewBody.CoffeShope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.name}" />
+
+            <View
+                android:id="@+id/divider_type_of_coffee_to_total"
+                style="@style/Divider.CoffeeShope"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:id="@+id/label_total"
+                style="@style/TextViewHead.CoffeShope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{@string/total(viewModel.price)}" />
+
+            <Button
+                android:id="@+id/cancel_button"
+                style="@style/Button.Cancel.CoffeShope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_button"
+                android:text="@string/cancel"
+                android:onClick="@{() -> finalOrder.goBack()}"/>
+
+            <Button
+                android:id="@+id/send_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_button"
+                android:backgroundTint="@color/light_brown"
+                android:text="@string/send"
+                android:onClick="@{() -> finalOrder.sendData()}"/>
+        </LinearLayout>
+
+    </ScrollView>
+</layout>
