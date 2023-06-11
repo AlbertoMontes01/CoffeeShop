@@ -7,7 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.coffeeshop.R
 
-private const val PRICE_PER_COFFEE = 14.00
+private const val PRICE_PER_COFFEE = 12.00
 
 class OrderViewModel : ViewModel() {
     private val _quantity = MutableLiveData<Int>()
